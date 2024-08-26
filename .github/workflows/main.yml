@@ -1,0 +1,16 @@
+# .github/workflows/deploy.yml
+name: Deploy Using Reusable Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    uses: owner/repo/.github/workflows/reusable-workflow.yml@main  # Replace with your reusable workflow's repository and branch
+    with:
+      branch: 'main'
+      environment: 'production'
+    secrets:
+      API_TOKEN: ${{ secrets.API_TOKEN }}  # Ensure this secret is configured in the repository
