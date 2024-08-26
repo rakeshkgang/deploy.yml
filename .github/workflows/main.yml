@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    uses: owner/repo/.github/workflows/reusable-workflow.yml@main  # Replace with your reusable workflow's repository and branch
+    uses: rakeshkgang/Reusable/.github/workflows/reusable-workflow.yml@main  # Replace with your reusable workflow's repository and branch
     with:
       branch: 'main'
       environment: 'production'
